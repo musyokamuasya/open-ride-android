@@ -1,24 +1,20 @@
 plugins {
-    id("com.android.library")
+    alias(libs.plugins.openride.android.library)
+    alias(libs.plugins.openride.kotlin.serialization)
+    alias(libs.plugins.openride.hilt)
 }
 
 android {
     namespace = "com.openrideafrica.core.network"
-    compileSdk = 36
-
-    defaultConfig {
-        minSdk = 26
-        consumerProguardFiles("proguard-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-        }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
 dependencies {
     implementation(project(":core:model"))
-    implementation(project(":core:common"))
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.serialization)
+    implementation(libs.okhttp.core)
+    implementation(libs.okhttp.logging)
 }

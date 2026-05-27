@@ -1,29 +1,12 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.plugin.compose")
+    alias(libs.plugins.openride.android.feature)
 }
 
 android {
     namespace = "com.openrideafrica.feature.driver.activetrip.impl"
-    compileSdk = 36
-
-    defaultConfig {
-        minSdk = 26
-        consumerProguardFiles("proguard-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-        }
-    }
-
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
-    implementation(project(":core:model"))
-    implementation(project(":core:common"))
+    implementation(project(":feature:driver:active-trip:api"))
+    implementation(project(":core:data"))
 }
