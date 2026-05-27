@@ -1,0 +1,12 @@
+# Gradle build outputs
+build/
+
+# Kotlin/Gradle convention plugin outputs
+build-logic/**/build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# Local config
+local.properties

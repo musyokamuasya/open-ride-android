@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             OpenRideTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "Rider App",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

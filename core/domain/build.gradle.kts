@@ -1,24 +1,14 @@
 plugins {
-    id("com.android.library")
+    alias(libs.plugins.openride.android.library)
+    alias(libs.plugins.openride.hilt)
 }
 
 android {
     namespace = "com.openrideafrica.core.domain"
-    compileSdk = 36
-
-    defaultConfig {
-        minSdk = 26
-        consumerProguardFiles("proguard-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-        }
-    }
 }
 
 dependencies {
     implementation(project(":core:model"))
-    implementation(project(":core:common"))
+    implementation(project(":core:data"))
+    implementation(libs.kotlinx.coroutines.core)
 }

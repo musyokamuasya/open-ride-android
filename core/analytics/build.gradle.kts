@@ -1,21 +1,9 @@
 plugins {
-    id("com.android.library")
+    alias(libs.plugins.openride.android.library)
 }
 
 android {
     namespace = "com.openrideafrica.core.analytics"
-    compileSdk = 36
-
-    defaultConfig {
-        minSdk = 26
-        consumerProguardFiles("proguard-rules.pro")
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-        }
-    }
 }
 
 dependencies {
