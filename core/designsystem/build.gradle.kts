@@ -7,3 +7,7 @@ plugins {
 android {
     namespace = "com.openrideafrica.core.designsystem"
 }
+
+dependencies {
+    implementation(libs.androidx.material3)
+}
