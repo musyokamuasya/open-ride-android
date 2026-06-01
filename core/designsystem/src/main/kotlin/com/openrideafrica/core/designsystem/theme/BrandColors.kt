@@ -29,7 +29,6 @@ internal val LightBrandColors = BrandColors(
 )
 
 internal val DarkBrandColors = LightBrandColors.copy(
-    onBrand = Palette.Ink900,
     successContainer = Palette.Ink700,
     rideActiveContainer = Palette.Ink700,
 )
