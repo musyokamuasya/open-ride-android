@@ -62,6 +62,12 @@ fun OpenRideAccentButton(
     }
 }
 
+@Preview(
+    name = "Dark Theme",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
+
 @Preview(name = "Light Theme", showBackground = true)
 @Composable
 private fun PrimaryButtonPreviewLight() {
@@ -80,39 +86,11 @@ private fun PrimaryButtonPreviewLight() {
     showBackground = true,
     uiMode = Configuration.UI_MODE_NIGHT_YES
 )
-@Composable
-private fun PrimaryButtonPreviewDark() {
-    OpenRideTheme(darkTheme = true) {
-        Box(Modifier.padding(MaterialTheme.dimensions.lg)) {
-            OpenRidePrimaryButton(
-                text = "Confirm ride",
-                onClick = {}
-            )
-        }
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
 private fun AccentButtonPreviewLight() {
     OpenRideTheme {
-        Box(Modifier.padding(MaterialTheme.dimensions.lg)) {
-            OpenRideAccentButton(
-                text = "Confirm ride",
-                onClick = {}
-            )
-        }
-    }
-}
-
-@Preview(
-    name = "Dark Theme",
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES
-)
-@Composable
-private fun AccentButtonPreviewDark() {
-    OpenRideTheme(darkTheme = true) {
         Box(Modifier.padding(MaterialTheme.dimensions.lg)) {
             OpenRideAccentButton(
                 text = "Confirm ride",
