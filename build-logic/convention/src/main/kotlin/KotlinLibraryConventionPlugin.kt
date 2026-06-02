@@ -1,3 +1,5 @@
+import com.openride.buildlogic.configureKotlinJvm
+import com.openride.buildlogic.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
