@@ -28,7 +28,7 @@ import com.openrideafrica.core.designsystem.theme.dimensions
 fun SearchEntryField(
     placeholder: String,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier
 ) {
     Surface(
         onClick = onClick,
