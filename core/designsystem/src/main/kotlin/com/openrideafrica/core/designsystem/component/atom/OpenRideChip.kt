@@ -70,7 +70,11 @@ fun OpenRideChip(
         }
     }
 }
-
+@Preview(
+    name = "Dark Theme",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 @Preview(showBackground = true)
 @Composable
 private fun ChipPreviewLight() {
@@ -83,6 +87,11 @@ private fun ChipPreviewLight() {
         }
     }
 }
+@Preview(
+    name = "Dark Theme",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 
 @Preview(showBackground = true)
 @Composable
@@ -97,33 +106,20 @@ private fun ChipPreviewLightWithIcon() {
         }
     }
 }
-
+@Preview(
+    name = "Dark Theme",
+    showBackground = true,
+    uiMode = Configuration.UI_MODE_NIGHT_YES
+)
 @Preview(showBackground = true)
 @Composable
-private fun SelectedChipPreviewLight() {
+private fun SelectedChipPreview() {
     OpenRideTheme {
         Box(Modifier.padding(MaterialTheme.dimensions.lg)) {
             OpenRideChip(
                 label = "Confirm",
                 onClick = {},
                 selected = true
-            )
-        }
-    }
-}
-
-@Preview(
-    name = "Dark Theme",
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES
-)
-@Composable
-private fun ChipPreviewDark() {
-    OpenRideTheme(darkTheme = true) {
-        Box(Modifier.padding(MaterialTheme.dimensions.lg)) {
-            OpenRideChip(
-                label = "Confirm",
-                onClick = {}
             )
         }
     }
