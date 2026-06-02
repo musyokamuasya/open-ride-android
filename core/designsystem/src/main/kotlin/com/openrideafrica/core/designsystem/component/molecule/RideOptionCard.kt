@@ -26,11 +26,6 @@ import com.openrideafrica.core.designsystem.theme.OpenRideTheme
 import com.openrideafrica.core.designsystem.theme.brandColors
 import com.openrideafrica.core.designsystem.theme.dimensions
 
-/**
- * A selectable ride option (Muve Economy / Premium). Selected = pale-yellow fill
- * + thin dark outline + rounded. Shows vehicle icon, name, ETA + capacity, and a
- * [PriceTag] with optional promo. "Recommended" badge intentionally omitted.
- */
 @Composable
 fun RideOptionCard(
     vehicleIcon: ImageVector,
