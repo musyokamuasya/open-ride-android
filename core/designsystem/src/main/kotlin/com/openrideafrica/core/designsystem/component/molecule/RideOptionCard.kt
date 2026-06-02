@@ -1,5 +1,6 @@
 package com.openrideafrica.core.designsystem.component.molecule
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,21 +40,13 @@ fun RideOptionCard(
     selected: Boolean = false,
 ) {
     val brand = MaterialTheme.brandColors
-    val container = if (selected) brand.selectedContainer else MaterialTheme.colorScheme.surface
-
+    val shape = MaterialTheme.shapes.large
     Surface(
         onClick = onClick,
-        shape = MaterialTheme.shapes.large,
-        color = container,
-        modifier = modifier
-            .fillMaxWidth()
-            .then(
-                if (selected) {
-                    Modifier.border(1.dp, brand.selectedOutline, MaterialTheme.shapes.large)
-                } else {
-                    Modifier
-                }
-            ),
+        shape = shape,
+        color = if (selected) brand.selectedContainer else MaterialTheme.colorScheme.surface,
+        border = if (selected) BorderStroke(1.dp, brand.selectedOutline) else null,
+        modifier = modifier.fillMaxWidth(),
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
