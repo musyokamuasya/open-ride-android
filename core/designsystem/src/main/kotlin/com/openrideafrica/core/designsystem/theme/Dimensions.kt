@@ -20,6 +20,7 @@ data class Dimensions(
     val buttonHeightSmall: Dp = 40.dp,
     val iconSm: Dp = 16.dp,
     val iconMd: Dp = 24.dp,
-    val iconLg: Dp = 32.dp,
+    val iconLg: Dp = 28.dp,
+    val tileLarge: Dp = 64.dp,
     val touchTarget: Dp = 48.dp,
 )

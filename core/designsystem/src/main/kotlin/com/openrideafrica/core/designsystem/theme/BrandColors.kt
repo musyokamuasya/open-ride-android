@@ -5,8 +5,10 @@ import androidx.compose.ui.graphics.Color
 
 @Immutable
 data class BrandColors(
-    val brand: Color,
-    val onBrand: Color,
+    val tile: Color,
+    val onTile: Color,
+    val selectedContainer: Color,
+    val selectedOutline: Color,
     val success: Color,
     val onSuccess: Color,
     val successContainer: Color,
@@ -17,8 +19,10 @@ data class BrandColors(
 )
 
 internal val LightBrandColors = BrandColors(
-    brand = Palette.Yellow500,
-    onBrand = Palette.Ink900,
+    tile = Palette.Yellow500,
+    onTile = Palette.Ink900,
+    selectedContainer = Palette.YellowTint,
+    selectedOutline = Palette.Ink900,
     success = Palette.Green500,
     onSuccess = Palette.White,
     successContainer = Palette.Green100,
@@ -29,6 +33,8 @@ internal val LightBrandColors = BrandColors(
 )
 
 internal val DarkBrandColors = LightBrandColors.copy(
+    selectedContainer = Palette.Ink700,
+    selectedOutline = Palette.Yellow500,
     successContainer = Palette.Ink700,
     rideActiveContainer = Palette.Ink700,
 )
