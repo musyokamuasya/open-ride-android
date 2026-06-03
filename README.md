@@ -158,6 +158,99 @@ open-ride-android/
 
 ---
 
+## Feature Checklist
+
+Progress tracker for planned features across all modules.
+
+Filter by scope: `rider` · `driver` · `shared` · `core`
+
+---
+
+### Auth & onboarding
+
+- [ ] Phone number signup & OTP verification · `shared` · 🔴 high
+- [ ] Email/password login fallback · `shared` · 🟡 med
+- [ ] Driver document upload & verification flow · `driver` · 🔴 high
+- [ ] Profile setup (name, photo, payment method) · `shared` · 🔴 high
+- [ ] Session persistence with DataStore · `core` · 🔴 high
+
+---
+
+### Maps & location
+
+- [ ] Real-time user location tracking · `core` · 🔴 high
+- [ ] Map display with custom markers · `core` · 🔴 high
+- [ ] Address autocomplete search · `rider` · 🔴 high
+- [ ] Route preview & ETA estimation · `rider` · 🔴 high
+- [ ] Driver location broadcast over WebSocket · `driver` · 🔴 high
+- [ ] Geofencing for surge pricing zones · `core` · 🟢 low
+
+---
+
+### Ride booking
+
+- [ ] Ride request flow (pickup → destination) · `rider` · 🔴 high
+- [ ] Fare estimate before booking · `rider` · 🔴 high
+- [ ] Vehicle category selection (economy, comfort…) · `rider` · 🟡 med
+- [ ] Scheduled rides (book for later) · `rider` · 🟢 low
+- [ ] Ride matching algorithm (server-side) · `core` · 🔴 high
+- [ ] Driver accept / decline request · `driver` · 🔴 high
+- [ ] Rider notification when driver assigned · `rider` · 🔴 high
+
+---
+
+### Active ride
+
+- [ ] Live trip tracking screen (rider) · `rider` · 🔴 high
+- [ ] Navigation turn-by-turn for driver · `driver` · 🔴 high
+- [ ] In-app rider ↔ driver messaging · `shared` · 🟡 med
+- [ ] Masked phone call between rider & driver · `shared` · 🟡 med
+- [ ] SOS / emergency contact button · `shared` · 🔴 high
+- [ ] Ride cancellation with reason & fee logic · `shared` · 🔴 high
+- [ ] Trip state machine (requested → matched → active → done) · `core` · 🔴 high
+
+---
+
+### Payments
+
+- [ ] M-Pesa STK push integration · `core` · 🔴 high
+- [ ] Card payment via Stripe / DPO · `core` · 🟡 med
+- [ ] Cash payment flow · `shared` · 🔴 high
+- [ ] Driver earnings wallet & payout · `driver` · 🔴 high
+- [ ] Promo codes & referral discounts · `rider` · 🟢 low
+- [ ] Trip receipt screen & email · `shared` · 🟡 med
+
+---
+
+### Ratings & safety
+
+- [ ] Post-trip rating (rider rates driver) · `rider` · 🔴 high
+- [ ] Post-trip rating (driver rates rider) · `driver` · 🔴 high
+- [ ] Driver aggregate rating display · `rider` · 🟡 med
+- [ ] Report incident / complaint flow · `shared` · 🟡 med
+- [ ] Share live trip with trusted contact · `rider` · 🟡 med
+
+---
+
+### Driver operations
+
+- [ ] Driver online / offline toggle · `driver` · 🔴 high
+- [ ] Earnings dashboard (daily, weekly, monthly) · `driver` · 🔴 high
+- [ ] Trip history with filter & search · `driver` · 🟡 med
+- [ ] Vehicle management (registration, insurance) · `driver` · 🟡 med
+- [ ] Driver incentive / bonus tracking · `driver` · 🟢 low
+
+---
+
+### Core infrastructure
+
+- [ ] WebSocket connection manager with reconnect · `core` · 🔴 high
+- [ ] Offline queue & background sync (WorkManager) · `core` · 🟡 med
+- [ ] Push notifications (FCM) · `core` · 🔴 high
+- [ ] Analytics event tracking · `core` · 🟢 low
+- [ ] Crash reporting integration · `core` · 🟡 med
+- [ ] Remote config / feature flags · `core` · 🟢 low
+
 ## License
 
 ```
